@@ -4,8 +4,9 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
+import { myHistory } from 'components/History';
+import HistoryRouter from 'components/History/HistoryRouter';
 const container = document.getElementById('root')!;
 
 const root = createRoot(container);
@@ -13,10 +14,10 @@ const root = createRoot(container);
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <BrowserRouter>
+            <HistoryRouter history={myHistory}>
                 <CssBaseline />
                 <App />
-            </BrowserRouter>
+            </HistoryRouter>
         </Provider>
     </React.StrictMode>
 );
