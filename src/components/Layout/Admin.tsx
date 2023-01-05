@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box/Box';
 import { Header, Sidebar } from 'components/Common';
+import { Outlet } from 'react-router-dom';
 import styles from './Admin.module.css';
 
 export interface AdminLayoutProps {}
@@ -17,16 +18,7 @@ export default function AdminLayout(props: AdminLayoutProps) {
                 </Box>
 
                 <Box className={styles.main}>
-                    {/* <Switch>
-                        <Route path="/admin/dashboard">
-                            <Dashboard />
-                        </Route>
-    
-                        <Route path="/admin/students">
-                            <StudentFeature />
-                        </Route>
-                    </Switch> */}
-                    Main
+                    <Outlet />
                 </Box>
             </Box>
         </Box>

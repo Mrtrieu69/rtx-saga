@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import LoginPage from 'features/auth/pages/LoginPage';
 import { AdminLayout } from 'components/Layout';
 import { NotFound, PrivateRoute } from 'components/Common';
+import Dashboard from 'features/dashboard';
+import Students from 'features/students';
 
 function App() {
     return (
@@ -14,7 +16,10 @@ function App() {
                         <AdminLayout />
                     </PrivateRoute>
                 }
-            />
+            >
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="students" element={<Students />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
         </Routes>
     );

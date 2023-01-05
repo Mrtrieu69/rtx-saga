@@ -13,7 +13,7 @@ function* handleLogin(payload: LoginPayload) {
                 name: 'Trieu Tam',
             })
         );
-        yield fork(myHistory.push, '/admin');
+        yield fork(myHistory.push, '/admin/dashboard');
     } catch (error: any) {
         yield put(loginFailed(error.message));
     }

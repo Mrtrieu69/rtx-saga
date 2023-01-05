@@ -7,10 +7,12 @@
 }
 
 .sidebar {
-    width: 30%;
+    height: calc(100vh - 64px);
+    width: 20%;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .main {
-    width: 70%;
+    width: 80%;
+    padding: 16px;
 }
